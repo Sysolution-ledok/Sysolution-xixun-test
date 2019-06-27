@@ -12,7 +12,7 @@ Press Save
 
  
 
-![wps1](D:\xixunAPP\sysolution-xixun-test-master\xixun-test\media\wps1.jpg)
+![](https://github.com/Sysolution-ledok/Sysolution-xixun-test/blob/master/xixun-test/media/wps1.jpg)
 
 Will send 3 pieces of data when connecting to the websocket server:
 
