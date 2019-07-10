@@ -333,15 +333,15 @@ substitude mode：
 
 -   windows system： open Control Panel, choose Windows Firewall, select “Advanced setup”, choose “inbound rules”, then choose “Add new rule’ on the right side of the window, choose “Program” and Next, 
 
-![![1561512705286](media/ee4d1f30d6f873bf8f7aff97ee73c6b8.png)
+![![1561512705286](media/811EB463-B39F-4d97-A238-B05FBA718E40.png)
 
 -   Please write down or select the path of node.exe, the default path name is C:\Program Files\nodejs\node.exe and then press Next,
   
     For last step, can choose nodejs for the name, press Finish. 
 
-![1561512730382](media/1f61a005c150c618fad38b8360cad79f.png)
+![1561512730382](media/957EE7EF-BAC6-40c8-9336-3D7E34E822BF.png)
 
-![1561512775071](media/1c70ecd22b7989caebc496c926667151.png)
+![1561512775071](media/7484E6B2-9A05-4ba7-9B4A-4AC12575DA45.png)
 
 
 
@@ -360,19 +360,19 @@ substitude mode：
 
 -   l Unzip the EasyBoard.zip file and install Easyboard software. After it detected the Y10 card, please enter Parameter settings, password is 888. 
 
-![](media/b4a0b92bc5a5ae7ab68d26723e23a59a.png)
+![](media/272A07FD-CF13-46c8-A5E4-A7BD9B3340E9.png)
 
 -   l Then go to “System network server configuration”。
 
-![](media/9fe5fc70d712cc7324a5a5035d2f81f1.png)
+![](media/512094CC-604C-40db-968B-A34A859B41CD.png)
 
 -   Input the Realtime server’s  host computer’s IP and port (8081 is default port) and SAVE.。
 
-![](media/96f41475b498970ca2d2987755967253.png)
+![](media/78435161-AB4A-41f0-BE2D-0F14AB1A0925.png)
 
 -   When see tip message saying Good Job, means save success. 
 
-![](media/a0df62a3cd677717d401ec1fcbf17363.png)
+![](media/06FD181C-A023-4ad4-B9C5-FF5D76743226.png)
 
 
 
@@ -1540,7 +1540,7 @@ answer data format：
 
 -   Open Easyboard software, detect Y10 card and enter parameter settings, password is 888, then go to “system network server configuration” and in the bottom, will see Realtime server address option, write down your server IP address and port, SAVE. 
 
-!![1561521004345](media/a0df62a3cd677717d401ec1fcbf17363.png)
+!![1561521004345](media/06FD181C-A023-4ad4-B9C5-FF5D76743226.png)
 
 ![](media/def0c8f61475f350c291c1bf04d75255.png)
 
