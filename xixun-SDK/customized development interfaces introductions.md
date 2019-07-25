@@ -1420,7 +1420,7 @@ sensor data format of POST to server：
 }
 ```
 <a name="3.3.57"></a>
-### 3.3.57、query controller current time(conn10.0.9 or above)
+### 3.3.57、query controller current time(conn10.1.4 or above)
 request data format：
 ```json
 {
@@ -1440,7 +1440,7 @@ return data format：
 ```
 
 <a name="3.3.58"></a>
-### 3.3.58、query controller storage(conn10.0.9 or above)
+### 3.3.58、query controller storage(conn10.1.4 or above)
 request data format：
 ```json
 {
@@ -1461,7 +1461,7 @@ return data format：
 ```
 
 <a name="3.3.59"></a>
-### 3.3.59、query xixunplayer current stored program JSON(conn10.0.9 or above
+### 3.3.59、query xixunplayer current stored program JSON(conn10.1.4 or above
 request data format：
 ```json
 {
@@ -1478,7 +1478,7 @@ answer data format：
 }
 ```
 <a name="3.3.60"></a>
-### 3.3.60、query xixunplayer 's current display program name (conn10.0.9 or above)
+### 3.3.60、query xixunplayer 's current display program name (conn10.1.4 or above)
 request data format：
 ```json
 {
