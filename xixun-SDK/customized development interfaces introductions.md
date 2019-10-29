@@ -57,107 +57,97 @@ customized development solution for xixun android system controller
 
 ​		[3.3.8、set background (support this function since xwalk-v1.5.3) ](#3.3.8)
 
-​		[3.3.9、play video list ](#3.3.9)
+​		[3.3.9、 Display programs downloaded from AIPS(from xixunplayer-v9.9.0) ](#3.3.9)
 
-​		[3.3.10、delete video list(support this function since conn-9.6.0) ](#3.3.10)
+​		[3.3.10、display streaming address（support rtmp，rtsp protocol, install live first）(from conn-v9.6.9)-](#3.3.10)
 
-​		[3.3.11、Pause video (support since conn-9.6.0) ](#3.3.11)
+​		[3.3.11、Upload and save files like  html﹑image and etc through character string to sd card ](#3.3.11)
 
-​		[3.3.12、Continue play video(support since conn-9.6.0) ](#3.3.12)
+​		[3.3.12、Delete files uploaded through character string format ](#3.3.12)
 
-​		[3.3.13、Play video on demand(support since conn-9.6.0)](#3.3.13)
+​		[3.3.13、Download files to sd card (random files like images, videos ) ](#3.3.13)
 
-​		[3.3.14、 Display programs downloaded from AIPS(from xixunplayer-v9.9.0) ](#3.3.14)
+​		[3.3.14、Delete files from sd card ](#3.3.14)
 
-​		[3.3.15、display streaming address（support rtmp，rtsp protocol, install live first）(from conn-v9.6.9)-](#3.3.15)
+​		[3.3.15、Get file size in sd card ](#3.3.15)
 
-​		[3.3.17、Upload and save files like  html﹑image and etc through character string to sd card ](#3.3.17)
+​		[3.3.16、Stop default player (xixunplayer) ](#3.3.16)
 
-​		[3.3.18、Delete files uploaded through character string format ](#3.3.18)
+​		[3.3.17、Download file to internal storage (images, videos and other files) (from conn-v9.8.1)  ](#3.3.17)
 
-​		[3.3.19、Download files to sd card (random files like images, videos ) ](#3.3.19)
+​		[3.3.18、Delete files from internal storage(from conn-v9.8.1) ](#3.3.18)
 
-​		[3.3.20、Delete files from sd card ](#3.3.20)
+​		[3.3.19、Upload and save html, images and other files to internal storage via character string format (from conn-v9.8.1) ](#3.3.19)
 
-​		[3.3.21、Get file size in sd card ](#3.3.21)
+​		[3.3.20、Check file size of internal storage(from conn-v9.8.4) ](#3.3.20)
 
-​		[3.3.22、Stop default player (xixunplayer) ](#3.3.22)
+​		[3.3.21、Get screenshot(from conn-v9.3.7)](#3.3.21)
 
-​		[3.3.23、Download file to internal storage (images, videos and other files) (from conn-v9.8.1)  ](#3.3.23)
+​		[3.3.22、.Get Gps location(from conn-v9.3.7) ](#3.3.22)
 
-​		[3.3.24、Delete files from internal storage(from conn-v9.8.1) ](#3.3.24)
+​		[3.3.23、Switch screen(from conn-v9.3.7) ](#3.3.23)
 
-​		[3.3.25、Upload and save html, images and other files to internal storage via character string format (from conn-v9.8.1) ](#3.3.25)
+​		[3.3.24、Query screen status(from conn-v9.3.7) ](#3.3.24)
 
-​		[3.3.26、Check file size of internal storage(from conn-v9.8.4) ](#3.3.26)
+​		[3.3.25、set brightness(from conn-v9.3.7)](#3.3.25)
 
-​		[3.3.27、Get screenshot(from conn-v9.3.7)](#3.3.27)
+​		[3.3.26、get brightness(from conn-v9.3.7) ](#3.3.26)
 
-​		[3.3.28、.Get Gps location(from conn-v9.3.7) ](#3.3.28)
+​		[3.3.27、set volume(from conn-v9.3.7) ](#3.3.27)
 
-​		[3.3.29、Switch screen(from conn-v9.3.7) ](#3.3.29)
+​		[3.3.28、get volume(from conn-v9.3.7) ](#3.3.28)
 
-​		[3.3.30、Query screen status(from conn-v9.3.7) ](#3.3.30)
+​		[3.3.29、get screen width pixels(from conn-v9.3.7) ](#3.3.29)
 
-​		[3.3.31、set brightness(from conn-v9.3.7)](#3.3.31)
+​		[3.3.30、get screen height pixels(from conn-v9.3.7) ](#3.3.30)
 
-​		[3.3.32、get brightness(from conn-v9.3.7) ](#3.3.32)
+​		[3.3.31、get network type(from conn-v9.3.7) ](#3.3.31)
 
-​		[3.3.33、set volume(from conn-v9.3.7) ](#3.3.33)
+​		[3.3.32、Set NTP server or time zone (from conn-v9.3.7) ](#3.3.32)
 
-​		[3.3.34、get volume(from conn-v9.3.7) ](#3.3.34)
+​		[3.3.33、Get NTP server(from conn-v9.3.7) ](#3.3.33)
 
-​		[3.3.35、get screen width pixels(from conn-v9.3.7) ](#3.3.35)
+​		[3.3.34、get timezone(from conn-v9.3.7) ](#3.3.34)
 
-​		[3.3.36、get screen height pixels(from conn-v9.3.7) ](#3.3.36)
+​		[3.3.35、reboot(from conn-v9.3.7) ](#3.3.35)
 
-​		[3.3.37、get network type(from conn-v9.3.7) ](#3.3.37)
+​		[3.3.36、get apk version(from conn-v9.3.7) ](#3.3.36)
 
-​		[3.3.38、Set NTP server or time zone (from conn-v9.3.7) ](#3.3.38)
+​		[3.3.37、get hardware version(from conn-v9.6.4) ](#3.3.37)
 
-​		[3.3.39、Get NTP server(from conn-v9.3.7) ](#3.3.39)
+​		[3.3.38、interface of update app online (conn10.0.5T or above) ](#3.3.38)
 
-​		[3.3.40、get timezone(from conn-v9.3.7) ](#3.3.40)
+​		[3.3.39、interface of advance parameters setup (conn10.0.5T or above) ](#3.3.39)
 
-​		[3.3.41、reboot(from conn-v9.3.7) ](#3.3.41)
+​		[3.3.40、interface of synchronous time setup(conn10.0.5T or above) ](#3.3.40)
 
-​		[3.3.42、get apk version(from conn-v9.3.7) ](#3.3.42)
+​		[3.3.41、setup auto brightness, brightness will auto adjust according to sensor data(conn10.0.5T or above) ](#3.3.41)
 
-​		[3.3.43、get hardware version(from conn-v9.6.4) ](#3.3.43)
+​		[3.3.42、query auto brightness (conn10.0.5T or above) ](#3.3.42)
 
-​		[3.3.44、interface of update app online (conn10.0.5T or above) ](#3.3.44)
+​		[3.3.43、brightness schedule, switch to various brightness value according to schedule time segment(conn10.0.5T or above) ](#3.3.43)
 
-​		[3.3.45、interface of advance parameters setup (conn10.0.5T or above) ](#3.3.45)
+​		[3.3.44、query brightness schedule's interface(conn10.0.5T or above) ](#3.3.44)
 
-​		[3.3.46、interface of synchronous time setup(conn10.0.5T or above) ](#3.3.46)
+​		[3.3.45、setup screen switch schedule's interface(conn10.0.5Tor above) ](#3.3.45)
 
-​		[3.3.47、setup auto brightness, brightness will auto adjust according to sensor data(conn10.0.5T or above) ](#3.3.47)
+​		[3.3.46、query screen switch schedule (conn10.0.5Tor above) ](#3.3.46)
 
-​		[3.3.48、query auto brightness (conn10.0.5T or above) ](#3.3.48)
+​		[3.3.47、reboot schedule's interface(conn10.0.5Tor above) ](#3.3.47)
 
-​		[3.3.49、brightness schedule, switch to various brightness value according to schedule time segment(conn10.0.5T or above) ](#3.3.49)
+​		[3.3.48、query reboot schedule time (conn10.0.5Tor above) ](#3.3.48)
 
-​		[3.3.50、query brightness schedule's interface(conn10.0.5T or above) ](#3.3.50)
+​		[3.3.49、delete xixunplayer data and file(conn10.0.5Tor above) ](#3.3.49)
 
-​		[3.3.51、setup screen switch schedule's interface(conn10.0.5Tor above) ](#3.3.51)
+​		[3.3.50、get sensor data's interface(conn10.0.0or above) ](#3.3.50)
 
-​		[3.3.52、query screen switch schedule (conn10.0.5Tor above) ](#3.3.52)
+​		[3.3.51、query controller current time(conn10.0.9or above) ](#3.3.51)
 
-​		[3.3.53、reboot schedule's interface(conn10.0.5Tor above) ](#3.3.53)
+​		[3.3.52、query controller disk storage(conn10.0.9or above) ](#3.3.52)
 
-​		[3.3.54、query reboot schedule time (conn10.0.5Tor above) ](#3.3.54)
+​		[3.3.53、query current stored program in xixunplayer JSON(conn10.0.9or above) ](#3.3.53)
 
-​		[3.3.55、delete xixunplayer data and file(conn10.0.5Tor above) ](#3.3.55)
-
-​		[3.3.56、get sensor data's interface(conn10.0.0or above) ](#3.3.56)
-
-​		[3.3.57、query controller current time(conn10.0.9or above) ](#3.3.57)
-
-​		[3.3.58、query controller disk storage(conn10.0.9or above) ](#3.3.58)
-
-​		[3.3.59、query current stored program in xixunplayer JSON(conn10.0.9or above) ](#3.3.59)
-
-​		[3.3.60、query current display program name from xixunplayer(conn10.0.9or above) ](#3.3.60)
+​		[3.3.54、query current display program name from xixunplayer(conn10.0.9or above) ](#3.3.54)
 
 
 ​	[3.4、Built-in JS method for “top layer web page” ](#3.4)
@@ -571,70 +561,8 @@ Attention: loaded web page at this moment should be defined showHtml method alre
 
 <a name="3.3.9"></a>
 
-### 3.3.9、play video list
 
-**(**support this function since conn-9.6.8, added new property pathList, use relative path, support internal storage for non-y10 card, can use protocol ofdownload file to controller**to download files**)
-
-```json
-{ 
-    "type":"setPlayList", 
-    "list":[ 
-        "/data/data/com.xixun.xy.conn/files/local/abc**/test.mp4" 
-            ], 
-    "pathList":[ 
-        "/test.mp4", 
-        "/include/video/loop_idle_mp_visual.mp4"
-    ], 
-    "width":640, 
-    "height":200, 
-    "top":0, 
-    "left":320 
-} 
-//pathListmeans the path of sd card, its root directory start with**/mnt/sdcard/**
-//list is returned absolute path of downloading file to storage
-```
-
-<a name="3.3.10"></a>
-
-### 3.3.10、delete vide list(support this function since conn-9.6.0)
-
-```json
-{ 
-	"type":"clearPlayList"
-}
-```
-
-<a name="3.3.11"></a>
-### 3.3.11、Pause video (support since conn-9.6.0)
-
-```json
-{ 
-	"type":"pause"
-}
-```
-
-<a name="3.3.12"></a>
-### 3.3.12、 Continue play video(support since conn-9.6.0)
-
-```json
-{ 
-	"type":"continue"
-} 
-```
-
-
-<a name="3.3.13"></a>
-### 3.3.13、play video on demand(support since conn-9.6.0)
-
-```json
-{ 
-	"type":"play", 
-	"index": 0 
-}
-```
-
-<a name="3.3.14"></a>
-### 3.3.14、Display programs downloaded from AIPS(from xixunplayer-v9.9.0)
+### 3.3.9、Display programs downloaded from AIPS(from xixunplayer-v9.9.0)
 
 ```json
 { 
@@ -647,8 +575,8 @@ Attention: loaded web page at this moment should be defined showHtml method alre
 }
 ```
 
-<a name="3.3.15"></a>
-### 3.3.15、display streaming address（support rtmp，rtsp protocol, install live first）(from conn-v9.6.9)
+<a name="3.3.9"></a>
+### 3.3.10、display streaming address（support rtmp，rtsp protocol, install live first）(from conn-v9.6.9)
 
 ```json
 { 
@@ -660,9 +588,9 @@ Attention: loaded web page at this moment should be defined showHtml method alre
 }
 ```
 
-<a name="3.3.16"></a>
+<a name="3.3.10"></a>
 
-### 3.3.16、stop display streaming address (from conn-v9.6.9)
+### 3.3.11、stop display streaming address (from conn-v9.6.9)
 
 ```json
 { 
@@ -672,8 +600,8 @@ Attention: loaded web page at this moment should be defined showHtml method alre
 ```
 
 
-<a name="3.3.17"></a>
-### 3.3.17、Upload and save files like  html﹑image and etc through character string to sd card
+<a name="3.3.11"></a>
+### 3.3.12、Upload and save files like  html﹑image and etc through character string to sd card
 
 （this protocol works for pushing text data to led control card, support no more than 10MB files; if larger than 10MB, please use “download to sd card”protocol, it works for led control card downloads files from http server, support big size file.） 
 save type of binary file:
@@ -709,8 +637,8 @@ save html：
 NOTE：all files uploaded by this protocol will be saved to the directory of file:///sdcard/xixun_realtime/, so if no SD card can not use this interface.
 
 
-<a name="3.3.18"></a>
-### 3.3.18、Delete files uploaded through character string format
+<a name="3.3.12"></a>
+### 3.3.13、Delete files uploaded through character string format
 
 ```json
 { 
@@ -721,8 +649,8 @@ NOTE：all files uploaded by this protocol will be saved to the directory of fil
 ```
 
 
-<a name="3.3.19"></a>
-### 3.3.19、Download files to sd card (random files like images, videos )
+<a name="3.3.13"></a>
+### 3.3.14、Download files to sd card (random files like images, videos )
 
 ```json
 { 
@@ -732,9 +660,9 @@ NOTE：all files uploaded by this protocol will be saved to the directory of fil
 }
 ```
 
-<a name="3.3.20"></a>
+<a name="3.3.14"></a>
 
-### 3.3.20、 Delete files from sd card
+### 3.3.15、 Delete files from sd card
 
 ```json
 { 
@@ -743,9 +671,9 @@ NOTE：all files uploaded by this protocol will be saved to the directory of fil
 }
 ```
 
-<a name="3.3.21"></a>
+<a name="3.3.15"></a>
 
-### 3.3.21、Get file size in sd card
+### 3.3.16、Get file size in sd card
 
 **can check upload(download) success or not by using this protocol**
 
@@ -758,8 +686,8 @@ Return:{"length":2560812,"_type":"success"}
 ```
 
 
-<a name="3.3.22"></a>
-### 3.3.22、Stop default player (xixunplayer)
+<a name="3.3.16"></a>
+### 3.3.17、Stop default player (xixunplayer)
 
 ```json
 { 
@@ -769,8 +697,8 @@ Return:{"length":2560812,"_type":"success"}
 ```
 
 
-<a name="3.3.23"></a>
-### 3.3.23、 Download file to internal storage (images, videos and other files) (from conn-v9.8.1)
+<a name="3.3.17"></a>
+### 3.3.18、 Download file to internal storage (images, videos and other files) (from conn-v9.8.1)
 
 ```json
 { 
@@ -782,9 +710,9 @@ Return:
 {"_type":"success","absolutePath":"/data/data/com.xixun.xy.conn/files/local/abc/demo.html"}
 ```
 
-<a name="3.3.24"></a>
+<a name="3.3.18"></a>
 
-### 3.3.24、 Delete files from internal storage(from conn-v9.8.1)
+### 3.3.19、 Delete files from internal storage(from conn-v9.8.1)
 
 ```json
 { 
@@ -794,8 +722,8 @@ Return:
 ```
 
 
-<a name="3.3.25"></a>
-### 3.3.25、Upload and save html, images and other files to internal storage via character string format （same saveStringFile principle with that of Item13 (from conn-v9.8.1)
+<a name="3.3.19"></a>
+### 3.3.20、Upload and save html, images and other files to internal storage via character string format （same saveStringFile principle with that of Item13 (from conn-v9.8.1)
 
 ```json
 //already disable
@@ -809,9 +737,9 @@ Return:
 {"_type":"success","absolutePath":"/data/data/com.xixun.xy.conn/files/local/demo.html"}
 ```
 
-<a name="3.3.26"></a>
+<a name="3.3.20"></a>
 
-### 3.3.26、Check file size of internal storage(from conn-v9.8.4)
+### 3.3.21、Check file size of internal storage(from conn-v9.8.4)
 
 ```json
 { 
@@ -821,8 +749,8 @@ Return:
 ```
 
 
-<a name="3.3.27"></a>
-### 3.3.27、 Get screenshot(from conn-v9.3.7)
+<a name="3.3.21"></a>
+### 3.3.22、 Get screenshot(from conn-v9.3.7)
 
 ```json
 { 
@@ -835,8 +763,8 @@ Return:{"result":"/9j/4AAQSkZJRgABAQAAAQABAAD/...."}screen shot is base 64 encod
 ```
 
 
-<a name="3.3.28"></a>
-### 3.3.28、Get Gps location(from conn-v9.3.7)
+<a name="3.3.22"></a>
+### 3.3.23、Get Gps location(from conn-v9.3.7)
 
 ```json
 { 
@@ -846,8 +774,8 @@ Return:{"lat":31.23856585,"lng":121.32834949}
 ```
 
 
-<a name="3.3.29"></a>
-### 3.3.29、Switch screen(from conn-v9.3.7)
+<a name="3.3.23"></a>
+### 3.3.24、Switch screen(from conn-v9.3.7)
 
 ```json
 { 
@@ -859,8 +787,8 @@ Return:{"result":true}
 ```
 
 
-<a name="3.3.30"></a>
-### 3.3.30、Query screen status (from conn-v9.3.7)
+<a name="3.3.24"></a>
+### 3.3.25、Query screen status (from conn-v9.3.7)
 
 ```json
 { 
@@ -871,8 +799,8 @@ Return:{"result":true}
 ```
 
 
-<a name="3.3.31"></a>
-### 3.3.31、Set brightness(from conn-v9.3.7)
+<a name="3.3.25"></a>
+### 3.3.26、Set brightness(from conn-v9.3.7)
 
 ```json
 { 
@@ -884,8 +812,8 @@ Return:{"result":true}
 ```
 
 
-<a name="3.3.32"></a>
-### 3.3.32、 Get brightness (from conn-v9.3.7)
+<a name="3.3.26"></a>
+### 3.3.27、 Get brightness (from conn-v9.3.7)
 
 ```json
 { 
@@ -896,8 +824,8 @@ Return:{"result":6}
 ```
 
 
-<a name="3.3.33"></a>
-### 3.3.33、Set volume(from conn-v9.3.7)
+<a name="3.3.27"></a>
+### 3.3.28、Set volume(from conn-v9.3.7)
 
 ```json
 { 
@@ -909,8 +837,8 @@ Return:{"result":true}
 ```
 
 
-<a name="3.3.34"></a>
-### 3.3.34、Get volume(from conn-v9.3.7)
+<a name="3.3.28"></a>
+### 3.3.29、Get volume(from conn-v9.3.7)
 
 ```json
 { 
@@ -921,8 +849,8 @@ Return:{"result":10}
 ```
 
 
-<a name="3.3.35"></a>
-### 3.3.35、Get screen width pixel(from conn-v9.3.7)
+<a name="3.3.29"></a>
+### 3.3.30、Get screen width pixel(from conn-v9.3.7)
 
 ```json
 { 
@@ -933,8 +861,8 @@ Return:{"result":1280}
 ```
 
 
-<a name="3.3.36"></a>
-### 3.3.36、Get screen height pixel (from conn-v9.3.7)
+<a name="3.3.30"></a>
+### 3.3.31、Get screen height pixel (from conn-v9.3.7)
 
 ```json
 { 
@@ -945,8 +873,8 @@ Return:{"result":512}
 ```
 
 
-<a name="3.3.37"></a>
-### 3.3.37、Get Network type(from conn-v9.3.7)
+<a name="3.3.31"></a>
+### 3.3.32、Get Network type(from conn-v9.3.7)
 
 ```json
 { 
@@ -957,8 +885,8 @@ Return:{"result":"ETH"}
 ```
 
 
-<a name="3.3.38"></a>
-### 3.3.38、 Set NTP server or time zone (from conn-v9.3.7)
+<a name="3.3.32"></a>
+### 3.3.33、 Set NTP server or time zone (from conn-v9.3.7)
 
 ```json
 { 
@@ -971,8 +899,8 @@ Return:{"result":true}
 ```
 
 
-<a name="3.3.39"></a>
-### 3.3.39、Get NTP server(from conn-v9.3.7)
+<a name="3.3.33"></a>
+### 3.3.34、Get NTP server(from conn-v9.3.7)
 
 ```json
 { 
@@ -983,8 +911,8 @@ Return:{"result":"ntp.sjtu.edu.cn"}
 ```
 
 
-<a name="3.3.40"></a>
-### 3.3.40、 Get time zone(from conn-v9.3.7)
+<a name="3.3.34"></a>
+### 3.3.35、 Get time zone(from conn-v9.3.7)
 
 ```json
 { 
@@ -994,9 +922,9 @@ Return:{"result":"ntp.sjtu.edu.cn"}
 Return:{"result":"Asia/Shanghai"}
 ```
 
-<a name="3.3.41"></a>
+<a name="3.3.35"></a>
 
-### 3.3.41、reboot (from conn-v9.3.7)
+### 3.3.36、reboot (from conn-v9.3.7)
 
 ```json
 { 
@@ -1007,9 +935,9 @@ Return:{"result":"Asia/Shanghai"}
 Return:{"result":true}
 ```
 
-<a name="3.3.42"></a>
+<a name="3.3.36"></a>
 
-### 3.3.42、Get APK version(from conn-v9.3.7)
+### 3.3.37、Get APK version(from conn-v9.3.7)
 
 ```json
 { 
@@ -1019,9 +947,9 @@ Return:{"result":true}
 Return:{"versionCode":4,"versionName":"1.4","firstInstallTime":1439539769420,"lastUpdateTime":1439539769420,"installLocation":1}
 ```
 
-<a name="3.3.43"></a>
+<a name="3.3.37"></a>
 
-### 3.3.43、Get hardware information(from conn-v9.6.4)
+### 3.3.38、Get hardware information(from conn-v9.6.4)
 
 ```json
 { 
@@ -1031,9 +959,9 @@ Return:{"versionCode":4,"versionName":"1.4","firstInstallTime":1439539769420,"la
 Return:{"_type":"success","result":[{"externalVoltage2":"0.0V","humidity":"0.0%","externalVoltage1":"0.0V","cardVoltage":"4.52V","smoke":"Normal","version":"a000","temperature":"55.0℃","doorOpened":"Open"}]}
 ```
 
-<a name="3.3.44"></a>
+<a name="3.3.38"></a>
 
-### 3.3.44、interface of update APP online(conn10.0.5Tor above)
+### 3.3.39、interface of update APP online(conn10.0.5Tor above)
 
 interface JSON format,example：
 
@@ -1056,9 +984,9 @@ success return, example：
 }
 ```
 
-<a name="3.3.45"></a>
+<a name="3.3.39"></a>
 
-### 3.3.45、interface of advance parameters setup(conn10.0.5T or above)
+### 3.3.40、interface of advance parameters setup(conn10.0.5T or above)
 
 interface JSON format,example:
 
@@ -1074,9 +1002,9 @@ interface JSON format,example:
 
 controller will disconnect before start new connection if setup success, so if not return "not opened" error means success.  
 
-<a name="3.3.46"></a>
+<a name="3.3.40"></a>
 
-### 3.3.46、interface of synchronizie time(conn10.0.5T or above)
+### 3.3.41、interface of synchronizie time(conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1104,9 +1032,9 @@ return success data format,example：
 }
 ```
 
-<a name="3.3.47"></a>
+<a name="3.3.41"></a>
 
-### 3.3.47、setup auto brightness, brightness will auto adjust according to sensor data(conn10.0.5T or above
+### 3.3.42、setup auto brightness, brightness will auto adjust according to sensor data(conn10.0.5T or above
 
 interface JSON format, example：
 
@@ -1128,9 +1056,9 @@ return success data format,example：
 }
 ```
 
-<a name="3.3.48"></a>
+<a name="3.3.42"></a>
 
-### 3.3.48、query auto brightness(conn10.0.5T or above)
+### 3.3.43、query auto brightness(conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1151,9 +1079,9 @@ return success data format,example：
 }
 ```
 
-<a name="3.3.49"></a>
+<a name="3.3.43"></a>
 
-### 3.3.49、brightness schedule, switch to various brightness value according to schedule time segment(conn10.0.5T or above)
+### 3.3.44、brightness schedule, switch to various brightness value according to schedule time segment(conn10.0.5T or above)
 
 please refer to relative 
 
@@ -1217,9 +1145,9 @@ return success data format,example：
 }
 ```
 
-<a name="3.3.50"></a>
+<a name="3.3.44"></a>
 
-### 3.3.50、interface of query brightness schedule(conn10.0.5T or above)
+### 3.3.45、interface of query brightness schedule(conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1242,9 +1170,9 @@ return success data format,example：
 
 TIPS：can use interface 6 of java class](https://gitee.com/sysolution/xixun-test/attach_files) to deserilization
 
-<a name="3.3.51"></a>
+<a name="3.3.45"></a>
 
-### 3.3.51、set screen switch schedule (conn10.0.5T or above)
+### 3.3.46、set screen switch schedule (conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1288,9 +1216,9 @@ interface JSON format, example：
 
 TIPS: task data structure same as that of interface 6, please refer to relative [java class](https://gitee.com/sysolution/xixun-test/attach_files)
 
-<a name="3.3.52"></a>
+<a name="3.3.46"></a>
 
-### 3.3.52、query screen switch schedule(conn10.0.5T or above)
+### 3.3.47、query screen switch schedule(conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1321,9 +1249,9 @@ has schedule
 }
 ```
 
-<a name="3.3.53"></a>
+<a name="3.3.47"></a>
 
-### 3.3.53、interface of restart in schedule(conn10.0.5T or above)
+### 3.3.48、interface of restart in schedule(conn10.0.5T or above)
 
 controller will restart in specified time per day after invoke this interface, so be cautious. 
 
@@ -1347,9 +1275,9 @@ return success, example：
 }
 ```
 
-<a name="3.3.54"></a>
+<a name="3.3.48"></a>
 
-### 3.3.54、query restart shedule time(conn10.0.5T or above)
+### 3.3.49、query restart shedule time(conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1369,9 +1297,9 @@ return success, example：
 }
 ```
 
-<a name="3.3.55"></a>
+<a name="3.3.49"></a>
 
-### 3.3.55、delete xixunplayer program data and files (conn10.0.5T or above)
+### 3.3.50、delete xixunplayer program data and files (conn10.0.5T or above)
 
 interface JSON format, example：
 
@@ -1391,9 +1319,9 @@ return success, example：
 }
 ```
 
-<a name="3.3.56"></a>
+<a name="3.3.50"></a>
 
-### 3.3.56、interface of get sensor data(conn10.0.0 or above)
+### 3.3.51、interface of get sensor data(conn10.0.0 or above)
 
 interface JSON format, example：
 
@@ -1419,8 +1347,8 @@ sensor data format of POST to server：
     "pm10":"--"//PM10 unit μg/m³
 }
 ```
-<a name="3.3.57"></a>
-### 3.3.57、query controller current time(conn10.1.4 or above)
+<a name="3.3.51"></a>
+### 3.3.52、query controller current time(conn10.1.4 or above)
 request data format：
 ```json
 {
@@ -1439,8 +1367,8 @@ return data format：
 }
 ```
 
-<a name="3.3.58"></a>
-### 3.3.58、query controller storage(conn10.1.4 or above)
+<a name="3.3.52"></a>
+### 3.3.53、query controller storage(conn10.1.4 or above)
 request data format：
 ```json
 {
@@ -1460,8 +1388,8 @@ return data format：
 }
 ```
 
-<a name="3.3.59"></a>
-### 3.3.59、query xixunplayer current stored program JSON(conn10.1.4 or above
+<a name="3.3.53"></a>
+### 3.3.54、query xixunplayer current stored program JSON(conn10.1.4 or above
 request data format：
 ```json
 {
@@ -1477,8 +1405,8 @@ answer data format：
 "data": "{\"task\":{\"_department\":{\"_company\":\"test\",\"_id\":\"\",\"name\":\"RootDepartment\",\"priority\":0},\"_id\":\"5d08bd360926d29d1ae78ef1\",\"items\":[...],\"name\":\"1212121_Task\"}}"
 }
 ```
-<a name="3.3.60"></a>
-### 3.3.60、query xixunplayer 's current display program name (conn10.1.4 or above)
+<a name="3.3.54"></a>
+### 3.3.55、query xixunplayer 's current display program name (conn10.1.4 or above)
 request data format：
 ```json
 {
@@ -1495,7 +1423,7 @@ answer data format：
   "name": "1212121"  //program name
 }
 ```
-<a name="3.4"></a>
+<a name="3.3.55"></a>
 
 ## 3.4、Built-in JS method for “top layer web page”
 
