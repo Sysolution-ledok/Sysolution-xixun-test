@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- This page should be designed by you -->
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background:black; color:white; ">
+	<h1 style="background:blue; width:640px;">This is a realtime page!!</h1>
+	<div id="a"></div>
+	<video autoplay="autoplay" loop="loop">
+	  <source src="/movie.ogg" type="video/ogg" />
+	  <source src="/test.mp4" type="video/mp4" />
+		Your browser does not support the video tag.
+	</video>
+	</video>	
+	<script>
+		//document.write($card.getCardId()+'')
+		var data={
+			cardId: $card.getCardId(),
+			screenWidth: $card.getScreenWidth(),
+			screenHeight: $card.getScreenHeight(),
+			deviceWidth:$card.getDeviceWidth(),
+			deviceHeight:$card.getDeviceHeight(),
+		}
+		
+		document.getElementById('a').innerHTML = JSON.stringify(data)
+	</script>
+</body>
+</html>

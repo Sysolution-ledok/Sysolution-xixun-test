@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body style="color:white;background: black;margin-top: -8px;margin-left: -2px;font-family: 宋体">
+<div id="hdemo" style="height:200px;overflow:hidden;">
+<div id="indemo" style="height:200%;">
+<div id="hdemo1">
+欢迎您搭乘北京地铁列车.希望您有一个愉快的旅程.Welcome to Beijing Metro.We hope you will have a pleasant journey.<br />
+第二行字<br />
+第三行字<br />
+第四行字<br/>
+第5行字<br />
+第6行字<br />
+第7行字<br />
+第8行字
+</div>
+<div id="hdemo2" style="width: 320px;word-wrap : break-word;"></div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+speed = 50; //数字越大滚得越慢
+var htab = document.getElementById("hdemo");
+var htab1 = document.getElementById("hdemo1");
+var htab2 = document.getElementById("hdemo2");
+htab2.innerHTML = htab1.innerHTML;
+htab.scrollTop = htab1.offsetHeight;
+function Marquee(){
+if (htab.scrollTop >= htab1.offsetHeight) {
+htab.scrollTop-=htab2.offsetHeight;
+}else{
+htab.scrollTop+=1;
+}
+}
+var MyMar=setInterval(Marquee,speed);
+</script>
+    </body>
+</html>
