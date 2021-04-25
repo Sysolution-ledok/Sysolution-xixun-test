@@ -61,7 +61,7 @@ modify the lowest compatible version, following is the version table
 
 this file is in the same folder.
 
-## 4，将第三方APK安装到Le控制器中
+## 4，将第三方APK安装到Led控制器中
 Open ledok, click terminal control, then click Advanced settings, enter password 888, and uninstall xixunplayer first
 
 ![image-20200227165237548](../pictures/android-ledok4.png)
