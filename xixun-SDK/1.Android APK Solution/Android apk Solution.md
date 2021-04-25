@@ -15,25 +15,23 @@ Preparation：
 
 ### 2.1、download and install Easyboard
 
-Please visit https://ledok.cn/download.html，download and install Easyboard.
+请访问https://ledok.cn/download.html，下载并安装LedOK。
 
-![image-20200227130556267](../pictures/easyboardlink.png)
+！[image-20200227130556267]（../ pictures / android-ledok1.png）
 
 ### 2.2、Check led controller android version
 
-run easyborad
+运行 ledOK
 
-![image-20200227165156967](../pictures/easymain2.png)
-
-click that arrow icon and then move to the right side, will find the android version of led controller.
-
-![image-20200227165237548](../pictures/easymain3.png)
+![image-20200227165156967](../pictures/ android-ledok2.png)
+See the details
+![image-20200227165237548](../pictures/ android-ledok3.png)
 
 ### 2.3、Setup APK android compatible version
 
 Run android development tool, find build.gradle file under project app directory, open this file
 
-![image-20200227165318393](../pictures/Androidstudio.png)
+![image-20200227165318393](../pictures/ android-ledok4.png)
 
 modify the lowest compatible version, following is the version table
 
@@ -62,16 +60,7 @@ modify the lowest compatible version, following is the version table
 
 this file is in the same folder.
 
-## 4、Install third party APK into Led controller
-
-open Easyboard and click Parameter settings, password is 888
-
-![image-20200227165528343](../pictures/easy1.png)
-
-![image-20200227165542876](D:\xixun-test\pictures\easy2.png)
-
-Enter "System version management"
-
-![image-20200227165602755](../pictures/easy3.png)
-
-Click "Update software" button, select the APK and wait for upgrade success. 
+## 4，将第三方APK安装到Le控制器中
+Open ledok, click terminal control, then click Advanced settings, enter password 888, and uninstall xixunplayer first
+![image-20200227165237548](../pictures/ android-ledok4.png)
+Click APK to upgrade, select APK, click OK and wait for the prompt to upgrade successfully.
