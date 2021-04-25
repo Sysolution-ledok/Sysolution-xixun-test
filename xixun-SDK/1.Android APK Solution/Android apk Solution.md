@@ -17,21 +17,21 @@ Preparation：
 
 请访问https://ledok.cn/download.html，下载并安装LedOK。
 
-！[image-20200227130556267]（../ pictures / android-ledok1.png）
+！[image-20200227130556267]（../pictures/android-ledok1.png）
 
 ### 2.2、Check led controller android version
 
 运行 ledOK
 
-![image-20200227165156967](../pictures/ android-ledok2.png)
+![image-20200227165156967](../pictures/android-ledok2.png)
 See the details
-![image-20200227165237548](../pictures/ android-ledok3.png)
+![image-20200227165237548](../pictures/android-ledok3.png)
 
 ### 2.3、Setup APK android compatible version
 
 Run android development tool, find build.gradle file under project app directory, open this file
 
-![image-20200227165318393](../pictures/ android-ledok4.png)
+![image-20200227165318393](../pictures/Androidstudio.png)
 
 modify the lowest compatible version, following is the version table
 
@@ -62,5 +62,5 @@ this file is in the same folder.
 
 ## 4，将第三方APK安装到Le控制器中
 Open ledok, click terminal control, then click Advanced settings, enter password 888, and uninstall xixunplayer first
-![image-20200227165237548](../pictures/ android-ledok4.png)
+![image-20200227165237548](../pictures/android-ledok4.png)
 Click APK to upgrade, select APK, click OK and wait for the prompt to upgrade successfully.
