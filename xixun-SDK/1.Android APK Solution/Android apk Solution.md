@@ -13,9 +13,9 @@ Preparation：
 
 ## 2、Check led controller android version
 
-### 2.1、download and install Easyboard
+### 2.1、download and install LedOK
 
-请访问https://ledok.cn/download.html，下载并安装LedOK。
+请访问https://ledok.cn/download.html，Download and install LedOK。
 
 
 ![image-20200227165156967](../pictures/android-ledok1.png)
