@@ -1,0 +1,39 @@
+为了更好的理解熙讯科技提供的二次开发方案，我们先描述一下熙讯控制卡内自带的应用程序以及其各自的功能应用。
+In order to understand the customized development solutions of xixun controller, let's know the existed xixun applications inside of controller in advance.
+首先，熙讯科技控制卡中包含四个核心的应用程序：
+first of all, xixun controller contians 4 core applications:
+
+cardsystem：this is core application, it is the basement of all underlying functions, such as turn on/off screen or adjust brightness and so on. 
+核心应用，所有的底层功能实现都需要cardsystem配合来完成，例如开关机或者调节亮度等
+conn：this is communication function, keep the communication between controller and web portal 通讯功能，负责控制卡和平台的通讯模块
+xixunplayer：player function, for display all contents. 
+播放功能，负责播放收到的显示内容
+update：updating function, for update core applications.
+升级功能，负责上述各应用的升级
+
+
+（1）Apk开发方案：直接开发安卓apk，这种开放方式最灵活 自己开发一个app在我们的控制卡上运行，不使用我们的xixunplayer播放器来显示，有提供jar包来调用调节亮度这些方法，通信的话可以选择跟自己的服务器来通信。安装自己的apk到控制卡里面必须先卸载掉xixunplayer播放器。
+（1）APK solution: directly develope third party APK, this is the most flexiable solution, which means customer can develop own APK and running in xixun controller, no need to use xixunplayer. xixun company will provide jar package to call functions like adjust brightness. while for communication, customer can choose to communicating with own server. must to uninstall xixunplayer in advance then install own APK. 
+
+
+（2）realtime开发方案：使用realtime开发方案，所有控制卡必须通过网络连接realtimeServer服务器软件（此软件基于nodejs运行），然后用户的web系统（或其他类型软件）使用http协议Post指定格式的数据到realtimeServer来实时操控显示，Realtime服务器承担一个转发的作用，与控制卡里面的conn软件通讯，控制卡根据接受到的指令做出相应的操作。各种接口实现都已经封装好了只需要调用就行。
+（2）Realtime solution: All controllers must access to realtimeServer (running based on nodejs) via internet, while customer's web system or other software can Post specified format data via http protocols to realtimeServer to display, so the realtime server forwarding data, keep communication with controller through conn application. All types of interfaces have been encapsulated ready, customer can call directly. 
+
+不支持的需求: （1）在播放视频时，可以暂停，然后根据需求时，再继续播放。
+（2）先将视频下载到控制卡，然后在播放
+
+Not supported requests: 2.1 pause the video and then continue to display 
+2.2. download the video to the controller in advance and then display. 
+
+
+（3）Websocket开发方案:需自己开发服务器，与控制卡的通信的协议是wss协议，接口与我们2.0平台接口相同相同，相当于替换掉我们的平台
+
+（3）Websocket solution: customer needs to develop own server, using wss protocols to keep communication between controller and the server, but using the same itnerfaces as ledaips2.0 platform, which means replace the ledaips2.0 protal into your own. 
+
+（4）网关局域网tcp开发方案:控制卡作为服务端，采用异步套接字，加快发送速度；文件发送过程中命令无应答，只有在发送前和发送完毕后接收一次设备端完成的应答；用ledOK中的u盘更新功能将节目导出来，用tcp的方式发送压缩包给控制卡，来播放节目。
+（4）Gateway LAN TCP solution: this is a fast development solution, take controller  as server side, adopting asynchronism socket; there is no command answer during sending file, only receiving an answer from controller side before and after sending file; using LEDOK express USB playback function to export the program and then sending to controller via TCP way to display. 
+
+
+网关局域网tcp方案子方式:直接跟控制卡通讯，ip地址加2016端口推送实时消息，程序直接发送文字到led控制卡，开发简单，速度快，有直接推送html代码在显示屏上显示，以及发送实时信息。
+
+sub solution of Gateway LAN: directly communicating with controller, then push realtime messsage via IP:2016, so that the application will push the texts to led controller directly, this is the most simple and fast way, can also push html codes to display and sending real time message. 
