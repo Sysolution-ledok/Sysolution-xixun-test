@@ -18,7 +18,7 @@ A callback function address for post is necessary, post method, receive json par
 
 following is java example:
 
-![image-getJson](../pictures/Secondarydevelopment3)
+![image-getJson](../pictures/Secondarydevelopment3.png)
 
 it can transfer the download progress to the front-end via ajax asynchronous request, the function will also be needed for the interface of getting sensor data. By printing out the download progress, you can more effectively locate whether there are errors in the sent JSON. If download progress report 100% twice means download the resource success, program will be display, but if led display still keep blank, which means wrong resources format or too high resolution. Normally the maximum resolution for image is 1280x512, 320-720p video. 
 
@@ -70,7 +70,7 @@ xixunplayer will auto detect if it is on the top layer, if not then it will cove
 
 ### 7，send command to controller and return Error: invalid command
 
-![image-20201210171301724](../pictures/Secondarydevelopment1)
+![image-20201210171301724](../pictures/Secondarydevelopment1.png)
 
 command not existed, please check command make sure no errors, normally because of lower conn version. please check conn version instructions and update to proper version. 
 
@@ -80,7 +80,7 @@ command not existed, please check command make sure no errors, normally because 
 
 
 
-![image-20201210172254400](../pictures/Secondarydevelopment2)
+![image-20201210172254400](../pictures/Secondarydevelopment2.png)
 
 visit controller ip:2016 port, such as 192.168.0.200:2016 (same effection of clear top layer UI in LAN network) or using {"type":"clear"}, if still not work then please uninstall xixunplayer and reinstall back and send again. 
 
