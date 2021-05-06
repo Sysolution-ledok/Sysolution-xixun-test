@@ -36,7 +36,7 @@ windows system：ress Shift key meanwhile right click “RealtimeServer” folde
 
 ## 2.4、Set server address for controller
 
-Please visit https://ledok.cn/download.html and download Easyboard software
+Please visit https://ledok.cn/download.html and download LedOK software
 
 ![image-20200227130556267](../pictures/android-ledok1.png)
 
