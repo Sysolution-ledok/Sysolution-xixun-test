@@ -8,7 +8,7 @@ First, need to build up a websocket server to receive controller's basic informa
 
 Example: if arrange the websocket server in192.168.8.99：8888, then please set the controller's web server address like the below image:
 
-![image-20200227164158738](../pictures/websocket-ledok1.png)
+![image-20200227164158738](../pictures/websocket-ledok.png)
 
 controller will send 3 pieces of data when connected to the websocket server: 
 
