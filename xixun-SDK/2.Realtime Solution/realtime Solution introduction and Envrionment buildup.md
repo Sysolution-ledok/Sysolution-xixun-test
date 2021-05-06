@@ -38,23 +38,23 @@ windows system：ress Shift key meanwhile right click “RealtimeServer” folde
 
 Please visit https://ledok.cn/download.html and download Easyboard software
 
-![image-20200227130556267](../pictures/easyboardlink.png)
+![image-20200227130556267](../pictures/android-ledok1.png)
 
 install Easyboard and run it, it will auto search all led controllers within the same Local area network.
 
-![img](../pictures/easyboardmain.png)
+![img](../pictures/realtime-ledok2.png)
 
 please enter Parameter settings, password is 888 .Then go to “System network server configuration”. （System version management option is for install and uninstall software and etc）.
 
-![img](../pictures/easyset.png)
+![img](../pictures/realtime-ledok3.png)
 
 Input the Realtime server’s  host computer’s IP and port (8081 is default port) and SAVE.
 
-![img](../pictures/easysetreal.png)
+![img](../pictures/realtime-ledok4.png)
 
 When see tip message saying Good Job, means save success
 
-![img](../pictures/setsuccess.png)
+![img](../pictures/realtime-ledok5.png)
 
 when connection success, realtime server interface will show following information 
 
