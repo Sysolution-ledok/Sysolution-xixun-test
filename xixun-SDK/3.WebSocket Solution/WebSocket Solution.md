@@ -2,62 +2,13 @@
 
 # WebSocket Solution
 
-## 1、Brief Introduction
-
-On the basis of **solution 2**, implement WebSocketServer itself (to replace the RealtimeServer in RealtimeSDK)
-
-Preparation：
-
-- know html+css
-- be good at JavaScript
-- At least know one back-end develop language（C#, JAVA, PHP, nodejs,etc）
-
-substitude mode：
-
-- For users who want to replace RealtimeServer（ to realize websocket server by themselves）please learn and know following communication:
-
-  1. android client side, when（websocket client)connecting to websocket server will send controller serial id, data is JSON character string {"cardId":"y10-xxxxx"}。
-  2. websocket server send the JSON data (and replenish a id field stands for command data ID ) in the following "data protocols" then will get correspond answer from websocket client .
-
-   For Instance: websocket server sends JSON data
-
-  ```json
-  { 
-      "_id":"001", 		/unqiue ID of data
-      "type":"loadUrl",
-      "url":"http://www.m2mled.net/ex2015/index_en.html",
-      "persistent": true 	//persistance, auto upload url after reboot
-  }_
-  ```
-
-  will receive JSON data from websocket client
-
-  ```json
-  {"_id":"001","_type":"success"}
-  ```
-
-  _type	is enumertate character string, has following possible values: 
-success 	means success
-  error     	will return with message when error, for instance:
-  
-  ```json
-{"_id":"001","_type":"error","message":"xxxxx"} 
-  ```
-  
-  restart 	client side first start after power on or means restart
-  pause 	client side screen was quit, but will only appear this value when plug mouse in controller and right click mouse
-
-## 2、Interface protocols
-
-interfaces are same with those of realtime, so use realtime Solution's interfaces. 
-
-## 3、Get basic information and heartbeat
+## 1、Get basic information and heartbeat
 
 First, need to build up a websocket server to receive controller's basic information and heartbeat package. Second, set the websocket server address as controller's web server address via Easyboard. 
 
 Example: if arrange the websocket server in192.168.8.99：8888, then please set the controller's web server address like the below image:
 
-![image-20200227164158738](../pictures/websocketset.png)
+![image-20200227164158738](../pictures/websocket-ledok.png)
 
 controller will send 3 pieces of data when connected to the websocket server: 
 

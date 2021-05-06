@@ -3,21 +3,28 @@ In order to understand the customized development solutions of xixun controller,
 first of all, xixun controller contians 4 core applications:
 
 cardsystem：this is core application, it is the basement of all underlying functions, such as turn on/off screen or adjust brightness and so on. 
-conn：this is communication function, keep the communication between controller and web portal 通讯功能，负责控制卡和平台的通讯模块
+
+conn：this is communication function, keep the communication between controller and web portal
 xixunplayer：player function, for display all contents. 
+
 update：updating function, for update core applications.
 
 
 （1）APK solution: directly develope third party APK, this is the most flexiable solution, which means customer can develop own APK and running in xixun controller, no need to use xixunplayer. xixun company will provide jar package to call functions like adjust brightness. while for communication, customer can choose to communicating with own server. must to uninstall xixunplayer in advance then install own APK. 
 
+
 （2）Realtime solution: All controllers must access to realtimeServer (running based on nodejs) via internet, while customer's web system or other software can Post specified format data via http protocols to realtimeServer to display, so the realtime server forwarding data, keep communication with controller through conn application. All types of interfaces have been encapsulated ready, customer can call directly. 
+
+
 
 Not supported requests: 2.1 pause the video and then continue to display 
 2.2. download the video to the controller in advance and then display. 
 
-（3）Websocket solution: customer needs to develop own server, using wss protocols to keep communication between controller and the server, but using the same itnerfaces as ledaips2.0 platform, which means replace the ledaips2.0 protal into your own. 
 
+
+（3）Websocket solution: customer needs to develop own server, using wss protocols to keep communication between controller and the server, but using the same interfaces as ledaips2.0 platform, which means replace the ledaips2.0 protal into your own. 
 
 （4）Gateway LAN TCP solution: this is a fast development solution, take controller  as server side, adopting asynchronism socket; there is no command answer during sending file, only receiving an answer from controller side before and after sending file; using LEDOK express USB playback function to export the program and then sending to controller via TCP way to display. 
+
 
 sub solution of Gateway LAN: directly communicating with controller, then push realtime messsage via IP:2016, so that the application will push the texts to led controller directly, this is the most simple and fast way, can also push html codes to display and sending real time message. 
