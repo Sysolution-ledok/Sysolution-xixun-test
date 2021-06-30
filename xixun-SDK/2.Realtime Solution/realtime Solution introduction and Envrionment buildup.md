@@ -26,7 +26,7 @@ Necessary Preparation：
 
 ## 2.2、Install nodejs
 
-Install the correct nodejs according to the Server operation system, download link：*http://nodejs.org/download/* . The SDK contains the application for windows 64bit and 32bit system. 
+Install the correct nodejs according to the Server operation system, download link：*https://nodejs.org/download/release/v4.4.7/ * . The SDK contains the application for windows 64bit and 32bit system. 
 
 ## 2.3、Run realtimeServer
 
