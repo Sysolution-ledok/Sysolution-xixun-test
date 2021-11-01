@@ -8,11 +8,11 @@ Necessary Preparation：
 
 - Know html+css
 - Be good at JavaScript
--  At least know one back-end develop language（C#, JAVA, PHP, nodejs,etc）
+- At least know one back-end develop language（C#, JAVA, PHP, nodejs,etc）
 
 ## 1.1、Realtime Diagram
 
-![img](../pictures/tuopu.png)
+![image](../pictures/tuopu.png)
 
 
 
@@ -21,45 +21,96 @@ Necessary Preparation：
 ## 2.1、brief introduction
 
 - This solution only workable for users who have knowledge of web technology, can visit any website by using loadUrl interface,Provide invokeJs to call javascript method in current webpage (can transfer text data via this method) to realize real time display, users can customize define display interface and logic.
+- This Solution provides two types of language : Java version and Nodejs version, recommend to use Nodejs version for Linux system
+- traits of Java : more stable service and multi-threading
+- traits of Nodejs: easier to install and build up
 
-> Principle:** controller connects to realtime Server software（this software running based on nodejs） through network, then users web system or other types software post specific format of data via http protocol to realtime Server then realize display in real time. 
+## 2.2、Install
 
-## 2.2、Install nodejs
+- Java：install the correct jdk according to the operation system and setup environment variable, support java1.8 and above.   
+- nodejs： Install the correct nodejs according to the Server operation system, download link：*https://nodejs.org/download/release/v4.4.7/ ,recommend to download nodejs 4.4.7 and above. The SDK contains the application for windows 64bit and 32bit system. 
 
-Install the correct nodejs according to the Server operation system, download link：*https://nodejs.org/download/release/v4.4.7/ * . The SDK contains the application for windows 64bit and 32bit system. 
+## 2.3、Run realtimeServer（nodejs）
 
-## 2.3、Run realtimeServer
-
-windows system：ress Shift key meanwhile right click “RealtimeServer” folder in SDK, then choose “Open command window here” and input node bin\www
+windows system: press Shift key meanwhile right click “RealtimeServer” folder in SDK, then choose “Open command window here” and input node bin\www
 
 ![img](../pictures/runRealtime.png)
 
-## 2.4、Set server address for controller
+## 2.4、Setup realtime service and run (JAVA)
 
-Please visit https://ledok.cn/download.html and download LedOK software
+open  harbour.properties config file, modify port, database address, user name, password and connection pool. can jump database configuration if no need.
 
-![image-20200227130556267](../pictures/android-ledok1.png)
+```xml
+server.port : service port
 
-install Easyboard and run it, it will auto search all led controllers within the same Local area network.
+uselog : use log file or not
 
-![img](../pictures/realtime-ledok2.png)
+callback_url : callback address after controller accessing
 
-please enter Parameter settings, password is 888 .Then go to “System network server configuration”. （System version management option is for install and uninstall software and etc）.
+db.host : database address+port
+db.user : database user name
+db.password : database password
 
-![img](../pictures/realtime-ledok3.png)
+db.maxPoolSize : maximum connections for connecting pool, default is 30
+db.acquireIncrement : Number of increased connections  per each time, default is 6
+db.maxIdleTime : Maximum idle seconds per connection, default 1800
+```
 
-Input the Realtime server’s  host computer’s IP and port (8081 is default port) and SAVE.
+harbour.properties  example:
 
-![img](../pictures/realtime-ledok4.png)
+```xml
+server.port = 9000
 
-When see tip message saying Good Job, means save success
+uselog = true
 
-![img](../pictures/realtime-ledok5.png)
+callback_url = http://localhost/mng/aaa/aaa
 
-when connection success, realtime server interface will show following information 
+db.host = localhost:3306
+db.user = root
+db.password = 123456
+
+db.maxPoolSize = 30
+db.acquireIncrement = 6
+db.maxIdleTime = 1800
+```
+
+windows system：press shift keyboard, right click the folder that contains harbour.jar,  select "Open command window here", then input java -jar harbour.jar  command to run up application. If a tip 'java' is not an internal or external command, then need install java running environment. 
+
+
+
+linux system：nohup java -jar harbour.jar &
+
+nohup  means not hanging up the running command, the program still runs when the account exits or the terminal is closed. 
+
+when adopt nohup command to execute job, By default, all the output of the job is redirected to the file of nohup.out unless otherwise specified.
+
+## 2.4、setup server address for controllers
+
+please  visit https://ledok.cn/download.html，and download LEDOK express software : 
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/1120/093920_e0fb51a2_7915659.png "屏幕截图.png")
+
+download and install LEDOK express software success, then normally software will auto detect the controller IP address. 
+
+![输入图片说明](..\pictures\devicelist.png)
+
+click Terminal control button, click advanced parameter button, password 888, enter the configuration interface (include uninstall apk and upgrade apk)
+
+![输入图片说明](..\pictures\real1.png)
+
+then input the realtime server 's host IP and port, default port 8081 click set
+
+![输入图片说明](..\pictures\real2.png)
+
+then will see TIP message： success 
+
+![输入图片说明](..\pictures\real3.png)
+
+after connecting success, realtime server interface will show following information 
 
 ![img](../pictures/connection.png)
 
-## 2.5、Modify realtime port
+## 2.5、modify realtime port（nodejs）
 
-If want to modify monitor port for realtime server, please go to directory of realtimeServer and open config.js file by text editor then change 8081 into new port number and then set terminal restart notification. Please refer to explanation of restartNotification.
+if need to modify realtimeServer's monitor port, then enter the realtimServer catalogue of sdk, open config.js file by using text editor, change 8081 into any other port number. 
+
