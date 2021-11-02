@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="./iconfont-20191031//iconfont.js"></script>
+  <link rel="stylesheet" type="text/css" href="./iconfont-20191031//iconfont.css">
+  <title>Document</title>
+  <script>
+    // 设置内容区域宽度
+    setTimeout(function () {
+      that.imgLoad();
+    }, 50);
+
+    var step = "";
+    var cluuid = "";
+    var fzuuid = "";
+    var fzlx = "";
+    var jtImages = []; // 静态图片
+    var dtImages = []; // 动态图片
+    var dtImageIndex = 0; // 动态图片播放索引
+    var tempInfo = {
+      wd: "22.7",
+      sd: "43.7",
+      pm25: "13.45",
+      pm10: "23.67",
+      qy: "1002.6",
+      zy: "53.9",
+      fs: "5.5"
+    }; // 温度信息
+    // 根据图片尺寸,设置总的宽度
+    function imgLoad() {
+      var urlWidth = getUrlParam('width');
+      console.log('urlWidth:', urlWidth);
+      var totalWidthClass = "total-area total-area-" + urlWidth;
+      var totalAreaDomList = document.getElementsByClassName("total-area");
+      totalAreaDomList[0].className = totalWidthClass;
+
+      // var img = new Image();
+      // img.src = url;
+      // if (img.complete) {
+      //   console.log(img.width, img.height);
+      //   var totalAreaDomList = document.getElementsByClassName("total-area");
+      //   totalAreaDomList[0].className = `total-area total-area-${img.width}`;
+      // }
+    };
+    //获取url中的参数
+    function getUrlParam(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+      var r = window.location.search.substr(1).match(reg); //匹配目标参数
+      if (r != null) return unescape(r[2]);
+      return null; //返回参数值
+    }
+    // 获取图片
+    function getImages() {
+      this.getJtImages();
+      this.getDtImages();
+    }
+    // 获取静态图片
+    function getJtImages() {
+      var url =
+        "/api/cloud/mg/getAttachments?search_EQ_tableName=ZHDG_SB_CL&search_EQ_tableField=fdimgs&search_EQ_tableRecordId=" +
+        cluuid;
+      var that = this;
+      $.get(url, function (data,
+        status) {
+        if (data.data === null) {
+          that.jtImages = [];
+        } else {
+          that.jtImages = data.data;
+        }
+        that.changeImageDisplay();
+      });
+    }
+    // 获取动态图片
+    function getDtImages() {
+      var url =
+        "/api/cloud/mg/getAttachments?search_EQ_tableName=ZHDG_SB_CL&search_EQ_tableField=imgs&search_EQ_tableRecordId=" +
+        cluuid;
+      var that = this;
+      $.get(url, function (data,
+        status) {
+        if (data.data === null) {
+          that.dtImages = [];
+        } else {
+          that.dtImages = data.data;
+        }
+      });
+    }
+    // 切换图片显示
+    function changeImageDisplay() {
+      $(".total-env-info").show();
+      $("#back-image").attr("src", "/api" + jtImages[0].url);
+      setInterval(function () {
+        if ($("#back-image").attr("src") === ("/api" + jtImages[0].url)) {
+          // 切换动态图片
+          if (that.dtImages.length === 0) {
+            // 无动图，不切换
+            return;
+          }
+          $(".total-env-info").hide();
+          that.dtImageIndex = 0;
+          $("#back-image").attr("src", "/api" + that.dtImages[this.dtImageIndex].url);
+        } else {
+          if (that.dtImageIndex === that.dtImages.length - 1) {
+            // 播放静态图片
+            $(".total-env-info").show();
+            $("#back-image").attr("src", "/api" + jtImages[0].url);
+          } else {
+            // 切换下一张动态图片
+            $(".total-env-info").hide();
+            that.dtImageIndex++;
+            $("#back-image").attr("src", "/api" + that.dtImages[this.dtImageIndex].url);
+          }
+        }
+      }, that.step * 1000);
+    }
+    // 获取温度信息
+    function getTempInfo() {
+      var url = "/api/cloud/zhdg_data/hjcgq/getByFzuuid?fzuuid=" + fzuuid + "&fzlx=" + fzlx;
+      var that = this;
+      $.get(url, function (data,
+        status) {
+        if (data.data !== null) {
+          that.tempInfo = data.data;
+        }
+        $("#wd").text(that.tempInfo.wd);
+        $("#sd").text(that.tempInfo.sd);
+        $("#pm25").text(that.tempInfo.pm25);
+        $("#pm10").text(that.tempInfo.pm10);
+        $("#qy").text(that.tempInfo.qy);
+        $("#zy").text(that.tempInfo.zy);
+        $("#fs").text(that.tempInfo.fs);
+      });
+    }
+
+    var that = this;
+    $(document).ready(function () {
+      step = getUrlParam('step');
+      cluuid = getUrlParam('cluuid');
+      fzuuid = getUrlParam('fzuuid');
+      fzlx = getUrlParam('fzlx');
+
+      // 每30分钟获取一次图片
+      that.getImages();
+      setInterval(function () {
+        that.getImages();
+      }, 30 * 60 * 1000);
+
+      // 每30分钟获取一次温度信息
+      that.getTempInfo();
+      setInterval(function () {
+        that.getTempInfo();
+      }, 30 * 60 * 1000);
+    });
+  </script>
+</head>
+
+<body>
+  <div class="total-area">
+    <div class="total-env-info">
+      <div class="temp-info">
+        <span class="text" id="wd">33</span>
+        <span class="unit">°C</span>
+      </div>
+      <div class="temp-explain">
+        <span class="icon">
+          <i class="iconfont icon-deviceInformation-wendu"></i>
+        </span>
+        <span class="unit">当前温度</span>
+      </div>
+      <!-- 其他环境参数 -->
+      <div class="other-evn-area">
+        <!-- pm2.5 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-PM"></i>
+          </span>
+          <span class="title">PM2.5</span>
+          <span class="content">
+            <span class="text" id="pm25">13.45</span>
+            <span class="unit">ug/m³</span>
+          </span>
+        </div>
+        <!-- pm10 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-PM1"></i>
+          </span>
+          <span class="title">PM10</span>
+          <span class="content">
+            <span class="text" id="pm10">25.74</span>
+            <span class="unit">ug/m³</span>
+          </span>
+        </div>
+        <!-- 噪音 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-zaoyin"></i>
+          </span>
+          <span class="title">噪音</span>
+          <span class="content">
+            <span class="text" id="zy">32</span>
+            <span class="unit">dB</span>
+          </span>
+        </div>
+        <!-- 湿度 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-shidu"></i>
+          </span>
+          <span class="title">湿度</span>
+          <span class="content">
+            <span class="text" id="sd">40</span>
+            <span class="unit">%</span>
+          </span>
+        </div>
+        <!-- 气压 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-qiya"></i>
+          </span>
+          <span class="title">气压</span>
+          <span class="content">
+            <span class="text" id="qy">1001</span>
+            <span class="unit">hPa</span>
+          </span>
+        </div>
+        <!-- 风速 -->
+        <div class="env-area">
+          <span class="evn-icon">
+            <i class="iconfont icon-deviceInformation-fengsu"></i>
+          </span>
+          <span class="title">风速</span>
+          <span class="content">
+            <span class="text" id="fs">5</span>
+            <span class="unit">m/s</span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="img-area">
+      <img id="back-image" src="./平云广场-128.jpg" alt>
+    </div>
+  </div>
+</body>
+
+<style>
+  .total-area {
+    color: white;
+  }
+
+  /* 104尺寸-市政府 */
+  .total-area-104 {
+    width: 90px;
+  }
+
+  /* 128尺寸-平云 */
+  .total-area-128 {
+    width: 110px;
+  }
+
+  .total-area .temp-info {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .total-area .temp-info .text {
+    font-size: 25px;
+  }
+
+  .total-area .temp-info .unit {
+    font-size: 16.5px;
+  }
+
+  .total-area .temp-explain {
+    margin-top: -2.5px;
+    text-align: center;
+  }
+
+  .total-area .temp-explain .icon {
+    position: relative;
+    top: 0.5px;
+  }
+
+  .total-area .temp-explain .unit {
+    font-size: 11px;
+    position: relative;
+    left: -2px;
+  }
+
+  .total-area .other-evn-area {
+    margin-top: 35px;
+  }
+
+  .total-area .other-evn-area .env-area {
+    font-size: 9px;
+    margin-top: 8.75px;
+    line-height: 12px;
+  }
+
+  .total-area .other-evn-area .env-area .evn-icon {
+    margin-left: -6px;
+  }
+
+  .total-area .other-evn-area .env-area .title {
+    margin-left: -2px;
+  }
+
+  .total-area .other-evn-area .env-area .content {
+    float: right;
+    position: relative;
+    right: -2px;
+  }
+
+  .total-area .other-evn-area .env-area .content .text {
+    position: relative;
+    bottom: -1.2px;
+  }
+
+  .total-area .other-evn-area .env-area .content .unit {
+    font-size: 7px;
+    line-height: 4.25px;
+    position: relative;
+    bottom: -0.7px;
+  }
+
+  .total-area .img-area {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .iconfont {
+    font-size: 13.5px;
+    vertical-align: -1.5px;
+    fill: currentColor;
+    overflow: hidden;
+  }
+</style>
+
+</html>

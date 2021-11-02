@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta charset="utf-8">
+   <title>img scroll</title>
+</head>
+
+<body >
+ <img id="img" style="width:96px;height: 192px;margin: -8px">
+  <script>
+  var list=["../test/img/1.png" ,"../test/img/2.png" ,"../test/img/3.png" ,"../test/img/4.png" ,"../test/img/5.png" ]
+  computedPlayImageIndex(list,5,"00:00");
+    
+    // 直接调用computedPlayImageIndex方法
+    //   imgList=["./flo.png","./timg.jpeg","./timg (1).jpeg"] 图片地址的数组
+    //   duration=10  整数 单位秒
+    //   settingTime="09:00" 定时播放的时间
+    //computedPlayImageIndex(["./flo.png","./letter.png","./timg (1).jpeg"],10,"9:00")
+    function computedPlayImageIndex(imgList,duration,settingTime){
+      var listLength=imgList.length
+      var nowTimeStamp=new Date().getTime()
+      var settingTimeStamp=new Date(getCurrentDate()+" "+settingTime).getTime()
+      if(nowTimeStamp>=settingTimeStamp){
+        var num=parseInt((nowTimeStamp-settingTimeStamp)/(duration*1000* listLength))
+        var leftDuration=nowTimeStamp-settingTimeStamp-num*duration*1000* listLength
+        var index = parseInt(leftDuration / (duration * 1000))
+        var nextDuration =(index+1) * duration * 1000 - leftDuration
+        if(nextDuration>0){
+          document.getElementById('img').src = imgList[index];
+          var task = window.setTimeout(function () {
+            playImage(index, imgList, duration)
+          }, nextDuration)
+        }else{
+          playImage(index, imgList, duration)
+
+        }
+      }
+
+
+    }
+     var task
+    function playImage(index,imgList,duration){
+      console.log(index,duration,new Date().getTime())
+      if(task)
+        window.clearInterval(task)
+      var nextIndex=  index+1 < imgList.length ? index + 1 : 0
+      document.getElementById('img').src =imgList[nextIndex];
+      task=window.setTimeout(function(){
+        playImage(nextIndex,imgList,duration)
+      },duration*1000)
+
+    }
+    function getCurrentDate() {
+        var now = new Date();
+        var year = now.getFullYear(); 
+        var month = now.getMonth();
+        var date = now.getDate();
+        month = month + 1;
+        if (month < 10) 
+          month="0" + month; 
+        if (date < 10)
+          date="0" + date; 
+        var time=year + "-" + month + "-" + date; 
+        return time; 
+    }
+    setInterval("computedPlayImageIndex(list,5,'00:00')", 1000);
+  </script>
+ 
+
+</body>
+
+</html>
