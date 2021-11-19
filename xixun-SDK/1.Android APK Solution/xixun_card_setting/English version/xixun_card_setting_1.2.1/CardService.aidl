@@ -9,66 +9,66 @@ import com.xixun.joey.aidlset.ThresholdRange;
 
 interface CardService {
 	String	getSoftVersion();
-	// 亮度
+	// brightness
 	boolean	setBrightness(int brightness);
 	int		getBrightness();
-	// 屏幕开关
+	// screen switch
 	boolean	setScreenOpen(boolean open);
 	boolean	isScreenOpen();
-	// 获取设置后屏幕宽高
+	// screen width and height after getting configuration
 	int		getScreenWidth();
 	int		getScreenHeight();
-	// 控制卡硬件参数
+	// controller's hardware parameters
 	List<FpgaInfomation> getFpgaInfomation();	
-	//开关屏幕
+	//turn on/off screen
 	boolean setTimingTaskScreen(in TaskToKeepScreenOn task);
 	TaskToKeepScreenOn getTaskToKeepScreenOn();
-	//亮度
+	//brightness
 	boolean setTimingTaskBrightness(in TaskToSetBrightness task);
 	TaskToSetBrightness getTaskToSetBrightness();
-	//声音
+	//volume
 	boolean setTimingTaskVolume(in TaskToSetVolume task);
 	TaskToSetVolume getTaskToSetVolume();
-	// 时间同步服务器及时区
+	// time sync server and timezone
 	boolean setTimeSync(String ntpServer, String timezone);  //Asia/Shanghai, UTC+8:00
 	String getNtpServer();
 	String getTimezone();
-	// 语言
+	// language
 	void setCardLanguage(String language);
 	String getNetworkType();
-	// 音量
+	// volume
 	boolean setVolume(int volume);
 	int		getVolume();
-	// 屏幕截图
+	// screenshot
 	byte[] screenshot(int quality, int scale);
-	/* 以下是警报阀值接口 */
-	// 温度：默认值null，表示不开启报警
+	/* alarm interfaces value in below */
+	// temperature：default value null，means disable alarm
 	boolean setAlarmTemperature(in ThresholdRange temperatureRange);
 	ThresholdRange getAlarmTemperature();	
-	// 湿度：默认值null，表示不开启报警
+	// humidity：defult value null，means disable alarm
 	boolean setAlarmHumidity(in ThresholdRange humidity);
 	ThresholdRange getAlarmHumidity();	
-	// 卡电压：默认值null，表示不开启报警
+	// controller voltage：default value null，means disable alarm
 	boolean setAlarmVoltage(in ThresholdRange voltage);
 	ThresholdRange getAlarmVoltage();	
-	// 外部电压1：默认值null，表示不开启报警
+	// external voltage1：default value null，means disable alarm
 	boolean setAlarmVoltage1(in ThresholdRange voltage1);
 	ThresholdRange getAlarmVoltage1();	
-	// 外部电压2：默认值null，表示不开启报警
+	// external voltage2：default value null，means disable alarm
 	boolean setAlarmVoltage2(in ThresholdRange voltage2);
 	ThresholdRange getAlarmVoltage2();	
-	// 门状态：默认值false，表示不开启报警
+	// door status：default value is false，means disable alarm
 	boolean setAlarmDoorOpened(boolean needAlarm);
 	boolean isAlarmDoorOpened();	
-	// 烟雾状态：默认值false，表示不开启报警
+	//smoke status：default value is false，means disable alarm
 	boolean setAlarmSmoke(boolean needAlarm);
 	boolean isAlarmSmoke();
-	// 重启
+	// restart
 	boolean reboot(int delayForSecond);
-	// 通用接口
+	// universal interface
 	String executeJsonCommand(String json);	
-	// 一键恢复 json
+	// recovery by one key json
 	boolean recoveryConfig();
-	// player清节目
+	// player clear program
 	boolean cleanPlayerAllTasks();
 }
