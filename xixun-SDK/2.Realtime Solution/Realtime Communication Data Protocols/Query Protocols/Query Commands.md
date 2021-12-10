@@ -101,7 +101,7 @@ Return:{"result":"Asia/Shanghai"}
 Return:{"versionCode":4,"versionName":"1.4","firstInstallTime":1439539769420,"lastUpdateTime":1439539769420,"installLocation":1}
 ```
 
-## 1.11、Get Hardware version
+## 1.11、Get Hardware state
 
 ```json
 { 
