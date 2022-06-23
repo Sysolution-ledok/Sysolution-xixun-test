@@ -15,7 +15,7 @@ Preparation：
 
 ### 2.1、download and install LedOK
 
-请访问https://ledok.cn/download.html，Download and install LedOK。
+please visit https://www.sysolution.net/news/software-download-73889.html，Download and install LedOK express。
 
 
 ![image-20200227165156967](../pictures/android-ledok1.png)
@@ -58,7 +58,7 @@ modify the lowest compatible version, following is the version table
 
 this file is in the same folder.
 
-## 4，将第三方APK安装到Led控制器中
+## 4，Install third-party APK into led controller
 Open ledok, click terminal control, then click Advanced settings, enter password 888, and uninstall xixunplayer first
 
 ![image-20200227165237548](../pictures/android-ledok3.png)
