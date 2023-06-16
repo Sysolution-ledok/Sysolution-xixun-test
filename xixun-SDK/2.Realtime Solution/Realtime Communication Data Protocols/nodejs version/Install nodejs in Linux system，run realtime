@@ -1,0 +1,5 @@
+1：execute command  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -  
+2：execute command  sudo apt-get install -y nodejs
+3：execute command node -v. if show nodejs version means installation success
+4：upload realtime to Linux server，enter to /RealtimeServer/bi directory
+5：execute command node www，then can run realtime
