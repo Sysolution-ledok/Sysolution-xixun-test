@@ -1,0 +1,1671 @@
+{
+	"info": {
+		"_postman_id": "70b90824-8214-4555-93fe-567cf1bb0339",
+		"name": "realtime方案接口",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "亮度相关",
+			"item": [
+				{
+					"name": "设置亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \t\t\t\t\r\n    \"fn\": \"setBrightness\", \t\t\t\t\r\n    \"arg1\": 6 \t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询当前亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\",\r\n    \"fn\": \"getBrightness\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置自动亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"setAutoBrightness\",\r\n    \"sensitivity\":\"80\",\t\t\r\n    \"minBrightness\":\"1\"\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询自动亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"getAutoBrightness\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "定时亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"timedBrightness\",\r\n    \"task\":{\r\n        \"_id\":\"591d519f5e3f190f697aaf18\",    \r\n        \"defaultBrightness\":6,\r\n        \"name\":\"Timing Brightness\",\r\n        \"items\":[\r\n            {\r\n                \"brightness\":32,\r\n                \"_id\":\"591d519f5e3f190f697aaf1a\",\r\n                \"schedules\":[\r\n                    {\r\n                        \"dateType\":\"All\",\r\n                        \"startDate\":null,\r\n                        \"endDate\":null,\r\n                        \"timeType\":\"Range\",\r\n                        \"startTime\":\"08:30\",\r\n                        \"endTime\":\"18:00\",\r\n                        \"filterType\":\"None\",\r\n                        \"weekFilter\":[\r\n\r\n                        ]\r\n                    }\r\n                ],\r\n                \"id\":\"591d519f5e3f190f697aaf1a\"\r\n            }\r\n        ],\r\n        \"id\":\"591d519f5e3f190f697aaf18\"\r\n\t}\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询定时亮度",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"_id\":\"83\",\t\t\r\n\t\"type\":\"getTimedBrightness\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "开关屏相关",
+			"item": [
+				{
+					"name": "开关屏",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"setScreenOpen\",\r\n    \"arg1\": true \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询当前屏幕状态",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"isScreenOpen\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "定时开关屏",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"timedScreening\",\r\n    \"task\":{ \r\n        \"_id\":\"5ba098d0502da61b67899c09\",\r\n        \"name\":\"7-0.58\",\r\n        \"schedules\":[\r\n            {\r\n                \"weekFilter\":[\r\n\r\n                ],\r\n                \"filterType\":\"None\",\r\n                \"endTime\":\"00:58\",\r\n                \"startTime\":\"07:00\",\r\n                \"timeType\":\"Range\",\r\n                \"endDate\":null,\r\n                \"startDate\":null,\r\n                \"dateType\":\"All\"\r\n            }\r\n        ],\r\n        \"id\":\"5ba098d0502da61b67899c09\"\r\n    }\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询定时开关屏",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"type\":\"getTimedScreening\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "音量相关",
+			"item": [
+				{
+					"name": "设置音量",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"setVolume\", \r\n    \"arg1\": 10\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询当前音量",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getVolume\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "节目相关",
+			"item": [
+				{
+					"name": "下发节目",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"type\":\"commandXixunPlayer\",\r\n  \"_id\":\"28dc5b76-51c9-11e9-9b24-4ccc6a95f6dc\",\r\n  \"command\":{\r\n    \"_type\":\"PlayXixunTask\",\r\n    \"id\":\"28dd5a80-51c9-11e9-9b24-4ccc6a95f6dc\",\r\n    \"preDownloadURL\":\"http://8.136.4.199/upload/\",\r\n    \"notificationURL\":\"http://192.18.2.105:8083/getJSON\",\r\n    \"task\":{\r\n      \"_id\":\"28dd55c6-51c9-11e9-9b24-4ccc6a95f6dc\",\r\n      \"name\":\"图片节目test\",\r\n      \"items\":[\r\n        {\r\n          \"_id\":\"7111bd0f-edba-4db6-8bd4-f5071d79a265\",\r\n          \"_program\":{\r\n            \"_id\":\"28dd2786-51c9-11e9-9b24-4ccc6a95f6dc\",\r\n            \"totalSize\":55066,\r\n            \"name\":\"图片节目test\",\r\n            \"width\":88,\r\n            \"height\":256,\r\n\t\t\t \"__v\":0,\r\n            \"layers\":[\r\n              {\r\n\t\t\t\t\"repeat\":false,\r\n                \"sources\":[\r\n                  {\r\n                    \"maxPlayTime\":31,\r\n                    \"_type\":\"Image\",\r\n                    \"md5\":\"b9bcfa191b1ddb4bdfc6a6057dc534f6\",\r\n                    \"name\":\"5s.jpg\",\r\n                    \"mime\":\"image/jpeg\",\r\n                    \"size\":55066,\r\n                    \"fileExt\":\".jpg\",\r\n                    \"id\":\"5s.jpg\",\r\n                    \"playTime\":0,\r\n                    \"timeSpan\":10,\r\n                    \"left\":0,\r\n                    \"top\":0,\r\n                    \"width\":88,\r\n                    \"height\":256,\r\n                    \"entryEffect\":\"None\",\r\n                    \"exitEffect\":\"None\",\r\n                    \"entryEffectTimeSpan\":0,\r\n                    \"exitEffectTimeSpan\":0\r\n                  }\r\n                ]\r\n              }\r\n            ]\r\n          },\r\n          \"priority\":0,\r\n          \"repeatTimes\":1,\r\n\t\t  \"version\":0,\r\n          \"schedules\":[\r\n            {\r\n              \"filterType\":\"None\",\t\t\r\n              \"timeType\":\"Range\",\t\t\r\n              \"startTime\":\"00:00\",\r\n              \"endTime\":\"23:59\",\r\n              \"dateType\":\"All\"\t\t\t\r\n            }\r\n          ]\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "清除播放器节目数据和文件",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"clearPlayerTask\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询播放器当前存储的节目JSON",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"getProgramTask\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询播放器当前正在播放的节目名",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"getPlayingProgram\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "按照编号点播节目",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"startProgramByIndex\",\r\n    \"index\":1\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "软件版本相关",
+			"item": [
+				{
+					"name": "在线更新app",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"type\":\"updateAPP\",\r\n\t\"appUrl\":\"https://m2mled.net/file/download?id=5c13839da62960b53cb07b42\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "在线卸载app",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"_id\":\"abc\",\r\n    \"type\": \"uninstallApp\", \r\n    \"pkg\": \"com.xixun.xixunplayer\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取apk信息",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"getPackageVersion\",  \r\n\t\"apk\": \"com.xixun.xy.xwalk\"  \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "同步校时相关",
+			"item": [
+				{
+					"name": "设置ntp服务器或时区",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"setTimeSync\", \r\n    \"arg1\": \"ntp.sjtu.edu.cn\", \r\n    \"arg2\": \"Asia/Shanghai\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "同步时间设置接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"setTimeSync\",\r\n    \"time\":\"serial\",\r\n    \"brightness\":\"none\",\r\n    \"volume\":\"none\",\t\r\n    \"screenSwitch\":\"none\",\t\r\n    \"identificationCode\":\"1\",\r\n    \"delaySync\":\"1\",\t\t\r\n    \"checkNtpTime\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取NTP服务器",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getNtpServer\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取时区",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getTimezone\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "同步时间查询接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"type\": \"getTimeSync\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "文件保存相关（特殊需求使用）",
+			"item": [
+				{
+					"name": "以字符串形式上传并保存html、图片等文件到sd卡",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"saveStringFile\", \r\n    \"fileName\": \"img.jpg\",\r\n    \"content\": \"base64Data\", \r\n    \"base64\":true\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除以字符串形式上传的文件",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"deleteFile\", \r\n    \"fileName\": \"img.jpg\", \r\n    \"deleteAll\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "下载文件到SD卡（图片、视频等任意文件）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"downloadFileToSD\", \r\n    \"url\": \"http://localhost:8080/demo.html\", \r\n    \"path\": \"/201505/download.html\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除SD卡上的文件",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"deleteFileFromSD\", \r\n    \"path\": \"/201505/download.html\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取SD卡上文件的大小",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"getFileLength\", \r\n    \"path\": \"/201505/download.html\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "下载文件到内部存储（图片、视频等任意文件）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"downloadFileToLocal\", \r\n\t\"url\": \"http://192.18.1.200:8080/demo.html\", \r\n\t\"path\": \"/abc/demo.html\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "删除内部存储里的文件",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"deleteFileFromLocal\", \r\n    \"path\": \"/abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查看内部存储里的文件大小",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"getLocalFileLength\", \r\n    \"path\": \"/abc/demo.html\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "流媒体播放相关",
+			"item": [
+				{
+					"name": "播放流地址（支持rtmp,rtsp协议，请先安装live",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"callLiveService\",\r\n    \"_type\":\"StartLiveVideo\",\r\n    \"url\":\"rtmp://live.hkstv.hk.lxdns.com/live/hks\",\r\n    \"width\":400,\r\n    \"height\":300\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "停止播放流地址",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"callLiveService\",\r\n    \"_type\":\"StopLiveVideo\"    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "系统相关",
+			"item": [
+				{
+					"name": "重启",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"type\": \"callCardService\", \r\n\"fn\": \"reboot\", \r\n\"arg1\": 1\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取屏幕截图",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"callCardService\", \r\n\t\"fn\": \"screenshot\", \r\n\t\"arg1\": 100, \r\n\t\"arg2\": 100\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "开关WiFi/AP接口（注意：由于涉及拨码开关，该接口仅打开或关闭WiFi模块，并不能控制当前是WiFi状态还是AP状态）",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"f237643d-c35c\",\r\n    \"type\": \"switchWiFi\" ,\r\n    \"on\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "设置服务器地址和公司ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"type\":\"advancedConfig\",\r\n\t\"serverURL\":\"www.ledaips.net\",\r\n\t\"companyId\":\"xixun\",\r\n\t\"realtimeURL\":\"192.18.8.88:808\",\r\n\t\"usbProgramPwd\":\"888\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取传感器数据接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\":\"Subscribe\",\r\n    \"action\":\"xixun.intent.action.TEMPERATURE_HUMIDITY\",\r\n    \"callbackURL\":\"\",\r\n    \"subscribe\":true \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取GPS坐标",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"getGpsLocation\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取屏宽",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getScreenWidth\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取屏高",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getScreenHeight\" \r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取网络类型",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getNetworkType\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取硬件状态",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n    \"type\": \"callCardService\", \r\n    \"fn\": \"getFpgaInfomation\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询设备磁盘空间",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"getDiskSpace\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "获取服务器地址和公司id接口",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"234234\",\r\n    \"type\": \"getServerAddress\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询设备当前时间",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"getControllerDate\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "查询控制卡基本信息(仅conn1045r版本或以上才支持)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"69497f645f8611eb80bcfa163e16af18\",\r\n    \"type\": \"getCardInformation\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "顶层网页相关",
+			"item": [
+				{
+					"name": "加载顶层网页",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\t\"type\":\"loadUrl\",\r\n\t\"url\":\"http://www.m2mled.net/ex2015/index_en.html\",\r\n\t\"persistent\": true\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "滚动文字",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\"type\": \"invokeBuildInJs\", \r\n\"method\": \"scrollMarquee\", \r\n\"num\": 5 , \r\n\"html\": \"<i><b style=\\\"color:blue;\\\">这是</b>要滚动的文字</i>\", \r\n\"interval\":50, \r\n\"step\":1, \r\n\"direction\": \"left\",\r\n\"align\": \"top\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "清屏，清除顶层网页内容",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \r\n\t\"type\": \"clear\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "8.8.8.8:8888/command/xxx-xxx-xxxxx",
+							"host": [
+								"8",
+								"8",
+								"8",
+								"8"
+							],
+							"port": "8888",
+							"path": [
+								"command",
+								"xxx-xxx-xxxxx"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

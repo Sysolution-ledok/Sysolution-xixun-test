@@ -1,0 +1,1 @@
+This document contains all realtime interface, modify your realtime address and controller serial ID by replaing the 8.8.8.8:8888/command/xxx-xxx-xxxxx and then import into postman, then start interface testing.
