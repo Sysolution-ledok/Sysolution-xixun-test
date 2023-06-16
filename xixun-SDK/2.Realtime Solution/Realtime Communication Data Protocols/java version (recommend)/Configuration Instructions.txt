@@ -1,0 +1,3 @@
+This service requires two ports
+while server.port is for service, receiving the commands from front side.
+xixun.netty-websocket.port is websocket server port，for connecting with device, when setup realtime address needs to use this port. 

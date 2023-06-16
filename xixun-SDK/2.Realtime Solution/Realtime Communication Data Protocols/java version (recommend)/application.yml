@@ -1,0 +1,11 @@
+server:
+  port: 8084
+spring:
+  profiles:
+    active: dev
+
+
+
+xixun:
+  netty-websocket:
+   port: 10010
