@@ -24,4 +24,6 @@ Before adopting this data protocol,please r**un RealtimeServer in advance; or re
 
   please refer to below image
 
-  ![img](../../pictures/postmandemo.png)
+  ![img](D:\xixun-test\pictures\postmandemo.png)
+
+  
